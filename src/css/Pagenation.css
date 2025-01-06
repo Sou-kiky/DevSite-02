@@ -1,0 +1,10 @@
+.AlbumWrapper{
+    display: flex;
+    place-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.title{
+    color: blue;
+}

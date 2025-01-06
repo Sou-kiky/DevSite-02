@@ -1,0 +1,15 @@
+Done.
+
+-jsonplaceholderについて学んだ
+-tailwindcssを入れた使い方は未だ
+-rafceでreactひな形補完
+-useEffectはレンダリング時に実行される？　台に引数を[]にすることで初回読み込み時のみ実行される
+
+Todo.
+
+-useEffectとは？
+-
+
+Memo.
+-useStateについて
+    useStateを使わない

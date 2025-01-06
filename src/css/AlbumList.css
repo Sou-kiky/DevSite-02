@@ -1,0 +1,8 @@
+.AlbumGridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.AlbumGridWrapper img{
+    width: 350px;
+}
