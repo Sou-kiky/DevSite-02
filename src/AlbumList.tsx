@@ -9,7 +9,7 @@ type Props = {
 
 const AlbumList = (props: Props) => {
 
-    const {albums, currentAlbums} = props;
+    const {currentAlbums} = props;
   return (
     <div className="AlbumGridWrapper">{currentAlbums.map((album) => (
         <div key={album.id}>
