@@ -1,10 +1,10 @@
 
-const HomePage = () => {
+const Home = () => {
   return (
     <>
-        <button className='text-white bg-black p-10 rounded'>HOMEPAGE</button>
+        <h2>HomePage</h2>
     </>
   )
 }
 
-export default HomePage
+export default Home

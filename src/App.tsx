@@ -1,12 +1,13 @@
 import './css/App.css'
 import Header from './Header'
-import HomePage from './HomePage'
+import Homepage from './HomePage'
 
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import { BlogPage } from './BlogPage'
 import { useEffect, useState } from 'react'
 import Album from './Type'
 import Pagenation from './Pagenation'
+import Three from './Three'
 
 
 function App() {
@@ -34,13 +35,20 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-
+          <Three />
           <Routes>
-            <Route path='/' element={<HomePage />} />
+            <Route path='/homepage' element={<Homepage />} />
             <Route path='/blog' element={<BlogPage />} />     
           </Routes>
-
-          <Pagenation albums={albums}/>
+          <div className='flex flex-col items-center justify-center h-screen'>
+            <p className='text-red-600 '>
+              ╱|、<br />
+              (˚ˎ 。7<br />
+                |、˜〵<br />          
+              じしˍ,)ノ
+            </p>
+          </div>
+          {/* <Pagenation albums={albums}/> */}
         </div>
       </Router>
     </>
