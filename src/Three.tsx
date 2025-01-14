@@ -4,7 +4,7 @@ import { AsciiEffect } from "three/examples/jsm/Addons.js";
 
 const Three = () => {
   let lastTime = 0;
-  const fps = 15;
+  const fps = 30;
 
   useEffect(() => {
     const canvasContainer = document.getElementById("canvas-container") as HTMLDivElement;
