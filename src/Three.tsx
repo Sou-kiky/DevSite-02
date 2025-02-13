@@ -4,10 +4,12 @@ import { AsciiEffect } from "three/examples/jsm/Addons.js";
 
 const Three = () => {
   let lastTime = 0;
-  const fps = 30;
+  const fps = 15;
 
   useEffect(() => {
-    const canvasContainer = document.getElementById("canvas-container") as HTMLDivElement;
+    const canvasContainer = document.getElementById(
+      "canvas-container"
+    ) as HTMLDivElement;
 
     const sizes = {
       width: window.innerWidth,
@@ -27,7 +29,9 @@ const Three = () => {
     camera.position.set(0, 0, 5);
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+    });
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(window.devicePixelRatio);
 
@@ -39,7 +43,7 @@ const Three = () => {
     effect.domElement.style.left = "0";
     effect.domElement.style.zIndex = "0";
     effect.domElement.style.color = "red";
-    
+
     canvasContainer.appendChild(effect.domElement);
 
     // Cube
@@ -92,8 +96,7 @@ const Three = () => {
         height: "100vh",
         overflow: "hidden",
       }}
-    >
-    </div>
+    ></div>
   );
 };
 

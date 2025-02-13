@@ -1,10 +1,11 @@
+import ThreeTest from "./ThreeTest";
 
 const Home = () => {
   return (
     <>
-        <h2>HomePage</h2>
+      <ThreeTest />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

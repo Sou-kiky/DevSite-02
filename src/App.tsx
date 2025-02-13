@@ -1,17 +1,21 @@
-import './css/App.css'
-import Header from './Header'
-import Homepage from './HomePage'
+import "./css/App.css";
+import Header from "./Header";
+import Homepage from "./HomePage";
 
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import { BlogPage } from './BlogPage'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import { BlogPage } from "./BlogPage";
 // import { useEffect, useState } from 'react'
 // import Album from './Type'
 // import Pagenation from './Pagenation'
-import Three from './Three'
-
+import Notfound from "./Notfound";
+import BlogContent from "./BlogContent";
 
 function App() {
-
   //useStateのやつ
   // const [albums, setAlbums] = useState<Album[]>([]);
 
@@ -33,26 +37,20 @@ function App() {
   return (
     <>
       <Router>
-        <div className="App">
+        <div className="container m-auto max-w-1110">
           <Header />
-          <Three />
           <Routes>
-            <Route path='/homepage' element={<Homepage />} />
-            <Route path='/blog' element={<BlogPage />} />     
+            <Route path="*" element={<Notfound />} />
+            <Route path="/" element={<Navigate to="/homepage" />} />
+            <Route path="/homepage" element={<Homepage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:id" element={<BlogContent />} />
           </Routes>
-          <div className='flex flex-col items-center justify-center h-screen'>
-            <p className='text-red-600 '>
-              ╱|、<br />
-              (˚ˎ 。7<br />
-                |、˜〵<br />          
-              じしˍ,)ノ
-            </p>
-          </div>
           {/* <Pagenation albums={albums}/> */}
         </div>
       </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
