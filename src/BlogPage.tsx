@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import ReactPaginate from "react-paginate";
+
 import blog from "./data/nikki.json";
-import BlogItems from "./BlogItems";
 
 export const BlogPage = () => {
   return (
